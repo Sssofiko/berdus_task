@@ -1,0 +1,168 @@
+{
+  "runs": [
+    {
+      "results": [
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/home/david/aixcc/src/main.c"
+                },
+                "region": {
+                  "startColumn": 5,
+                  "startLine": 12
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "2nd function call argument is an uninitialized value [clang-analyzer-core.CallAndMessage,-warnings-as-errors] "
+          },
+          "relatedLocations": [
+            {
+              "message": {
+                "text": "'i' declared without an initial value"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/home/david/aixcc/src/main.c"
+                },
+                "region": {
+                  "startColumn": 9,
+                  "startLine": 6
+                }
+              }
+            },
+            {
+              "message": {
+                "text": "2nd function call argument is an uninitialized value"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/home/david/aixcc/src/main.c"
+                },
+                "region": {
+                  "startColumn": 5,
+                  "startLine": 12
+                }
+              }
+            }
+          ]
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/home/david/aixcc/src/main.c"
+                },
+                "region": {
+                  "startColumn": 5,
+                  "startLine": 39
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "the value returned by this function should not be disregarded; neglecting it may lead to errors [cert-err33-c,-warnings-as-errors] "
+          },
+          "relatedLocations": [
+            {
+              "message": {
+                "text": "cast the expression to void to silence this warning"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/home/david/aixcc/src/main.c"
+                },
+                "region": {
+                  "startColumn": 5,
+                  "startLine": 39
+                }
+              }
+            }
+          ]
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/home/david/aixcc/src/main.c"
+                },
+                "region": {
+                  "startColumn": 5,
+                  "startLine": 39
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Call to function 'scanf' is insecure as it does not provide bounding of the memory buffer or security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'scanf_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling,-warnings-as-errors] "
+          },
+          "relatedLocations": [
+            {
+              "message": {
+                "text": "Call to function 'scanf' is insecure as it does not provide bounding of the memory buffer or security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'scanf_s' in case of C11"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/home/david/aixcc/src/main.c"
+                },
+                "region": {
+                  "startColumn": 5,
+                  "startLine": 39
+                }
+              }
+            }
+          ]
+        },
+        {
+          "level": "error",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/home/david/aixcc/src/main.c"
+                },
+                "region": {
+                  "startColumn": 5,
+                  "startLine": 41
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [clang-analyzer-security.insecureAPI.strcpy,-warnings-as-errors] "
+          },
+          "relatedLocations": [
+            {
+              "message": {
+                "text": "Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119"
+              },
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/home/david/aixcc/src/main.c"
+                },
+                "region": {
+                  "startColumn": 5,
+                  "startLine": 41
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "clang-tidy"
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}
